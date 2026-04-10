@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 練習專案管理系統</title>
+    <style>
+        :root {
+            --sidebar-width: 280px;
+            --primary-color: #4a90e2;
+            --dark-bg: #2c3e50;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f0f2f5;
+        }
+        /* 側邊欄樣式 */
+        aside {
+            width: var(--sidebar-width);
+            background-color: var(--dark-bg);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 10;
+        }
+        .sidebar-header {
+            padding: 30px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+        }
+        .sidebar-header h1 {
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+        .student-id {
+            background: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        nav {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin: 4px 15px;
+        }
+        a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.7);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: block;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+        }
+        a:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            transform: translateX(5px);
+        }
+        a:active, a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* 右側主內容區 */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <aside>
+        <div class="sidebar-header">
+            <h1>Vue 課堂練習目錄</h1>
+            <div class="student-id">學號：413730614</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="ex1/index.html" target="content-frame">練習 1：Vue 基礎</a></li>
+                <li><a href="ex2/index.html" target="content-frame">練習 2：資料綁定</a></li>
+                <li><a href="ex3/index.html" target="content-frame">練習 3：方法與事件</a></li>
+                <li><a href="ex4/index.html" target="content-frame">練習 4：雙向綁定</a></li>
+                <li><a href="ex5/index.html" target="content-frame">練習 5：條件渲染</a></li>
+                <li><a href="ex6/index.html" target="content-frame">練習 6：清單渲染</a></li>
+                <li><a href="ex7/index.html" target="content-frame">練習 7：計算屬性</a></li>
+                <li><a href="ex8/index.html" target="content-frame">練習 8：樣式切換</a></li>
+                <li><a href="ex9/index.html" target="content-frame">練習 9：待辦事項</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <iframe name="content-frame" src="ex1/index.html"></iframe>
+    </main>
+
+</body>
+</html>
