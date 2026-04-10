@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>你點了 {{ count }} 次</p>
+        <button @click="addOne">點我</button>
+        <button @click="reset">重設</button>
+      </div>
+      <!-- 引入 Vue -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+      <script>
+      Vue.createApp({
+        data() {  //vue傳回HTML的資料，內部設定值為初始設定值
+          return { count: 0 }
+        },
+        methods: { //執行的方法
+          addOne() {  //按下按鈕後，count的值加1
+            this.count++
+          },
+          reset() {
+            this.count = 0
+          }
+        }
+      }).mount("#app")
+      </script>
+      
+</body>
+</html>
